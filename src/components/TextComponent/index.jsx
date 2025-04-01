@@ -3,11 +3,7 @@ import PropTypes from 'prop-types'
 import * as Styled from './styles'
 
 export const TextComponent = ({ children }) => {
-  return (
-    <Styled.Container>
-      <p>{children}</p>
-    </Styled.Container>
-  )
+  return <Styled.Container dangerouslySetInnerHTML={{ __html: children }} />
 }
 
 TextComponent.propTypes = {
