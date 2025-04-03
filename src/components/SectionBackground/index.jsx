@@ -5,7 +5,7 @@ import { SectionContainer } from '../SectionContainer'
 
 export const SectionBackground = ({ children, background = false }) => {
   return (
-    <Styled.Container background={background}>
+    <Styled.Container $background={background || undefined}>
       <SectionContainer>{children}</SectionContainer>
     </Styled.Container>
   )

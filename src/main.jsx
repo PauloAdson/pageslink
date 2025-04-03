@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
 
-import Home from './templates/App/index.jsx'
 import { GlobalStyles } from './styles/global-styles.js'
 import { theme } from './styles/theme.js'
+import Home from './templates/Home/index.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

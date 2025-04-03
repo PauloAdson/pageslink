@@ -11,10 +11,10 @@ export const Heading = ({
 }) => {
   return (
     <Styled.Title
-      colorDark={colorDark}
+      $colorDark={colorDark}
       as={as}
       size={size}
-      uppercase={uppercase}
+      $uppercase={uppercase}
     >
       {children}
     </Styled.Title>
