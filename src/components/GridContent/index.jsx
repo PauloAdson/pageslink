@@ -1,4 +1,4 @@
-import P from 'prop-types'
+import PropTypes from 'prop-types'
 import { Heading } from '../Heading'
 import { SectionBackground } from '../SectionBackground'
 import { TextComponent } from '../TextComponent'
@@ -28,8 +28,8 @@ export const GridContent = ({
 }
 
 GridContent.propTypes = {
-  title: P.string.isRequired,
-  html: P.string.isRequired,
-  background: P.bool,
-  sectionId: P.string,
+  title: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
+  background: PropTypes.bool,
+  sectionId: PropTypes.string,
 }
