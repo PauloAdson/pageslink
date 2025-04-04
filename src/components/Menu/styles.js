@@ -8,7 +8,7 @@ const menuVisible = () => css`
 `
 
 export const Container = styled.div`
-  ${({ theme, visible }) => css`
+  ${({ theme, $visible }) => css`
     position: fixed;
     z-index: 5;
     top: 0;
@@ -33,7 +33,7 @@ export const Container = styled.div`
       height: 100vh;
       visibility: hidden;
       opacity: 0;
-      ${visible && menuVisible(theme)}
+      ${$visible && menuVisible(theme)}
 
       > ${SectionContainer} {
         display: grid;
@@ -68,7 +68,7 @@ export const MenuContainer = styled.div`
 `
 
 export const Button = styled.button`
-  ${({ theme, visible }) => css`
+  ${({ theme, $visible }) => css`
     z-index: 6;
     position: fixed;
     top: 2rem;
@@ -79,7 +79,7 @@ export const Button = styled.button`
     color: ${theme.colors.white};
     border: none;
     display: none;
-    pointer-events: ${visible ? 'none' : 'all'};
+    pointer-events: ${$visible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
       display: flex;
