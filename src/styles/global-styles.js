@@ -37,6 +37,32 @@ export const GlobalStyles = createGlobalStyle`
 
   .table {
     width: 100%;
-    overflow-y: auto;
+    overflow-x: auto;
+    display: block;
   }
+
+  table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+    table caption {
+      text-align: left;
+      caption-side: top;
+      margin: 1rem 0;
+      font-size: var(--font-small);
+      font-style: italic;
+    }
+
+    table th, table tfoot {
+      background: #eee;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #eee;
+      padding: 5px 10px;
+      text-align: left;
+    }
 `

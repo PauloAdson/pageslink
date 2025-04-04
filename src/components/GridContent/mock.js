@@ -1,5 +1,3 @@
-import { background } from 'storybook/internal/theming'
-
 export default {
   title: 'O Título que eu quero',
   html: `
