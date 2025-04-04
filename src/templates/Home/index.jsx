@@ -16,11 +16,11 @@ function Home() {
     const load = async () => {
       try {
         const resposta = await fetch(
-          'http://localhost:1337/api/pages?filters[slug][$eq]=landing-page&populate=*'
+          'http://localhost:1337/api/pages/?filters[slug]=landing-page&populate[menu][populate]=*&populate[sections][populate]=*'
         )
         const json = await resposta.json()
 
-        console.log('JSON recebido da API:', json)
+        // console.log('JSON recebido da API:', json)
 
         if (!json.data || json.data.length === 0) {
           throw new Error('Página não encontrada')
@@ -28,7 +28,7 @@ function Home() {
 
         // Agora passamos o próprio objeto data[0] para mapData
         const mappedData = mapData([json.data[0]])
-        console.log('Dados após mapData:', mappedData)
+        // console.log('Dados após mapData:', mappedData)
 
         if (!mappedData || mappedData.length === 0 || !mappedData[0].slug) {
           throw new Error('Slug não encontrado após mapData')
@@ -60,7 +60,6 @@ function Home() {
 
   const { menu, sections, footerHtml, slug } = data
   const { links, text, link, srcImg } = menu
-  console.log()
   // console.log(menu)
 
   // console.log({ text, link, srcImg })
@@ -89,7 +88,7 @@ function Home() {
           return <GridText key={key} {...section} />
         }
 
-        if (component === 'section.section-grid-image') {
+        if (component === 'section.section-grid-gallery') {
           return <GridImage key={key} {...section} />
         }
       })}

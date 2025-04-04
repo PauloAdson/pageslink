@@ -1,4 +1,4 @@
-import P from 'prop-types'
+import PropTypes from 'prop-types'
 import * as Styled from './styles'
 import { SectionBackground } from '../SectionBackground'
 import { Heading } from '../Heading'
@@ -16,7 +16,7 @@ export const GridTwoColumns = ({
       background={background || undefined}
       sectionId={sectionId}
     >
-      <Styled.Container background={background || undefined}>
+      <Styled.Container $background={!!background}>
         <Styled.TextContainer>
           <Heading uppercase colorDark={!background} as="h2">
             {title}
@@ -32,9 +32,9 @@ export const GridTwoColumns = ({
 }
 
 GridTwoColumns.propTypes = {
-  title: P.string.isRequired,
-  text: P.string.isRequired,
-  srcImg: P.string.isRequired,
-  background: P.bool,
-  sectionId: P.string,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  srcImg: PropTypes.string.isRequired,
+  background: PropTypes.bool,
+  sectionId: PropTypes.string,
 }

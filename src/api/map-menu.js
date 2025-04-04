@@ -3,10 +3,10 @@ export const mapMenu = (menu = {}) => {
     open_in_new_tab: newTab = false,
     logo_text: text = '',
     logo_link: link = '',
-    menu: links = [],
+    menu_links: links = [],
   } = menu
 
-  const srcImg = menu?.logo?.data?.attributes?.url || null
+  const srcImg = menu.logo && menu.logo.url ? menu.logo.url : ''
 
   return {
     newTab,
