@@ -22,7 +22,8 @@ function Home() {
     const load = async () => {
       try {
         const resposta = await fetch(
-          `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
+          // `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
+          `https://backend-landing-pages.onrender.com/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
         )
         const json = await resposta.json()
 
@@ -55,6 +56,21 @@ function Home() {
       isMounted.current = false
     }
   }, [location])
+
+  // Alterando o título da página com base nos dados recebidos
+  useEffect(() => {
+    if (data === undefined) {
+      document.title = 'Página não encontrada'
+    }
+
+    if (!data) {
+      document.title = 'Carregando...'
+    }
+
+    if (data && data.title) {
+      document.title = data.title
+    }
+  }, [data])
 
   if (data === undefined) {
     return <PageNotFound />
