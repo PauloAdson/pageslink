@@ -23,7 +23,8 @@ function Home() {
       try {
         const resposta = await fetch(
           // `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
-          `https://backend-landing-pages.onrender.com/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
+
+          `https://criar-landing-page.onrender.com/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*`
         )
         const json = await resposta.json()
 
