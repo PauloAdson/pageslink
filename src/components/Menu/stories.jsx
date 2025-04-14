@@ -11,6 +11,7 @@ export default {
       link: '#target',
       srcImg: '',
     },
+    background: false,
   },
 }
 

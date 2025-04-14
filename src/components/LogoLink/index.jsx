@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import * as Styled from './styles'
 import { Heading } from '../Heading'
 
-export const LogoLink = ({ text, srcImg = '', link }) => {
+export const LogoLink = ({ text, srcImg = '', link, $background }) => {
   return (
-    <Heading size="small" uppercase>
+    <Heading size="small" uppercase colorDark={!$background}>
       <Styled.Container href={link}>
-        {/* {srcImg ? <img src={srcImg} alt={text} /> : <span>{text}</span>} */}
         {!!srcImg && <img src={srcImg} alt={text} />}
         {!srcImg && text}
       </Styled.Container>
@@ -19,4 +18,5 @@ LogoLink.propTypes = {
   text: PropTypes.string.isRequired,
   srcImg: PropTypes.string,
   link: PropTypes.string,
+  background: PropTypes.bool,
 }

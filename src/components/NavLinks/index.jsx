@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 import * as Styled from './styles'
 import { MenuLink } from '../MenuLink'
 
-export const NavLinks = ({ links = [] }) => {
+export const NavLinks = ({ links = [], background }) => {
   return (
-    <Styled.Container>
+    <Styled.Container $background={background}>
       {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}
@@ -20,4 +20,5 @@ NavLinks.propTypes = {
       newTab: PropTypes.bool,
     })
   ),
+  background: PropTypes.bool,
 }

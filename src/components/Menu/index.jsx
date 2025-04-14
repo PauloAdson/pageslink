@@ -8,7 +8,7 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import { useState } from 'react'
 
-export const Menu = ({ links = [], logoData }) => {
+export const Menu = ({ links = [], logoData, background = false }) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -25,11 +25,15 @@ export const Menu = ({ links = [], logoData }) => {
         )}
       </Styled.Button>
 
-      <Styled.Container $visible={visible} onClick={() => setVisible(false)}>
+      <Styled.Container
+        $visible={visible}
+        onClick={() => setVisible(false)}
+        $background={background}
+      >
         <SectionContainer>
           <Styled.MenuContainer>
-            <LogoLink {...logoData} />
-            <NavLinks links={links} />
+            <LogoLink {...logoData} $background={background} />
+            <NavLinks links={links} background={background} />
           </Styled.MenuContainer>
         </SectionContainer>
       </Styled.Container>

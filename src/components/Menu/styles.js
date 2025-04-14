@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Container as SectionContainer } from '../SectionContainer/styles'
 import { Title as Heading } from '../Heading/styles'
+import { LogoLink } from '../LogoLink'
 
 const menuVisible = () => css`
   visibility: visible;
@@ -8,7 +9,7 @@ const menuVisible = () => css`
 `
 
 export const Container = styled.div`
-  ${({ theme, $visible }) => css`
+  ${({ theme, $visible, $background }) => css`
     position: fixed;
     z-index: 5;
     top: 0;
@@ -18,10 +19,11 @@ export const Container = styled.div`
     border-bottom: ${theme.colors.mediumGray};
     background: ${theme.colors.white};
     transition: all 300ms ease-in-out;
+    background: ${$background ? theme.colors.primaryColor : theme.colors.white};
 
     > ${SectionContainer} {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
     }
 
     & ${Heading} {

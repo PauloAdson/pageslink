@@ -28,15 +28,11 @@ function Home() {
         )
         const json = await resposta.json()
 
-        // console.log('JSON recebido da API:', json)
-
         if (!json.data || json.data.length === 0) {
           throw new Error('Página não encontrada')
         }
 
-        // Agora passamos o próprio objeto data[0] para mapData
         const mappedData = mapData([json.data[0]])
-        // console.log('Dados após mapData:', mappedData)
 
         if (!mappedData || mappedData.length === 0 || !mappedData[0].slug) {
           throw new Error('Slug não encontrado após mapData')
@@ -82,15 +78,13 @@ function Home() {
   }
 
   const { menu, sections, footerHtml, slug } = data
-  const { links, text, link, srcImg } = menu
-  // console.log(menu)
-
-  // console.log({ text, link, srcImg })
+  const { links, text, link, srcImg, background } = menu
 
   return (
     <Base
       links={links}
       footerHtml={footerHtml}
+      background={background}
       logoData={{ text, link, srcImg }}
     >
       {sections.map((section, index) => {
