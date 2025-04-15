@@ -11,7 +11,9 @@ export const Container = styled.div`
     color: ${theme.colors.primaryColor};
     ${$background && containerBackgroundActivate(theme)}
     min-height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
   `}
 `

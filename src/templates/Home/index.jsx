@@ -12,6 +12,7 @@ import { Loading } from '../Loading'
 import { mapData } from '../../api/map-data'
 
 import { useLocation } from 'react-router-dom'
+import { Footer } from '../../components/Footer'
 
 function Home() {
   const [data, setData] = useState(null)
@@ -20,7 +21,7 @@ function Home() {
 
   useEffect(() => {
     const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '')
-    const slug = pathName ? pathName : 'landing-page'
+    const slug = pathName ? pathName : 'pages-link'
 
     const load = async () => {
       try {
@@ -106,34 +107,40 @@ function Home() {
   const { links, text, link, srcImg, background } = menu
 
   return (
-    <Base
-      links={links}
-      footerHtml={footerHtml}
-      background={background}
-      logoData={{ text, link, srcImg }}
-    >
-      {sections.map((section, index) => {
-        const { component } = section
+    <>
+      <Base
+        links={links}
+        footerHtml={footerHtml}
+        background={background}
+        logoData={{ text, link, srcImg }}
+      >
+        {sections.map((section, index) => {
+          const { component } = section
 
-        const key = `${slug}-${index}`
+          const key = `${slug}-${index}`
 
-        if (component === 'section.section-two-columns') {
-          return <GridTwoColumns key={key} {...section} />
-        }
+          if (component === 'section.section-two-columns') {
+            return <GridTwoColumns key={key} {...section} />
+          }
 
-        if (component === 'section.section-content') {
-          return <GridContent key={key} {...section} />
-        }
+          if (component === 'section.section-content') {
+            return <GridContent key={key} {...section} />
+          }
 
-        if (component === 'section.section-grid-text') {
-          return <GridText key={key} {...section} />
-        }
+          if (component === 'section.section-grid-text') {
+            return <GridText key={key} {...section} />
+          }
 
-        if (component === 'section.section-grid-gallery') {
-          return <GridImage key={key} {...section} />
-        }
-      })}
-    </Base>
+          if (component === 'section.section-grid-gallery') {
+            return <GridImage key={key} {...section} />
+          }
+
+          return null
+        })}
+
+        {footerHtml && <Footer footerHtml={footerHtml} />}
+      </Base>
+    </>
   )
 }
 

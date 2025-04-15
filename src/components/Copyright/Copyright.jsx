@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types'
 
 import * as Styled from './styles'
+import { SectionContainer } from '../SectionContainer'
 
-export const Copyright = ({ children }) => {
+export const Copyright = () => {
   return (
     <Styled.Container>
-      <h1>{children}</h1>
+      {/* <SectionContainer> */}
+      <span>
+        PagesLink © {new Date().getFullYear()} | Desenvolvido por{' '}
+        <a href="/">Paulo Adson</a>
+      </span>
+      {/* </SectionContainer> */}
     </Styled.Container>
   )
 }
