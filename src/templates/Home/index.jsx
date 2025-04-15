@@ -26,12 +26,10 @@ function Home() {
       try {
         const baseUrl = import.meta.env.VITE_API_URL
 
-        const resposta = await fetch(
+        const respost = await fetch(
           `${baseUrl}/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*&populate=logo_favicon`
-
-          // `https://criar-landing-page.onrender.com/api/pages/?filters[slug]=${slug}&populate[menu][populate]=*&populate[sections][populate]=*&populate=logo_favicon`
         )
-        const json = await resposta.json()
+        const json = await respost.json()
 
         if (!json.data || json.data.length === 0) {
           throw new Error('Página não encontrada')
