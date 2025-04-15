@@ -11,7 +11,7 @@ export const Container = styled.span`
     justify-content: center;
     box-sizing: border-box;
     padding: ${theme.spacings.medium};
-    border-top: 0.1rem solid ${theme.colors.primaryColor};
+    background-color: rgb(231, 231, 231);
 
     & a {
       font-weight: 400;
