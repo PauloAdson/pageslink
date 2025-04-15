@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 
 import * as Styled from './styles'
-import { SectionContainer } from '../SectionContainer'
 
 export const Copyright = () => {
   return (
