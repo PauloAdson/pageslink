@@ -1,4 +1,4 @@
-import P from 'prop-types'
+import PropTypes from 'prop-types'
 import * as Styled from './styles'
 import { SectionBackground } from '../SectionBackground'
 import { Heading } from '../Heading'
@@ -37,14 +37,14 @@ export const GridText = ({
 }
 
 GridText.propTypes = {
-  background: P.bool,
-  title: P.string.isRequired,
-  description: P.string.isRequired,
-  grid: P.arrayOf(
-    P.shape({
-      title: P.string.isRequired,
-      description: P.string.isRequired,
+  background: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  grid: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
     })
   ).isRequired,
-  sectionId: P.string,
+  sectionId: PropTypes.string,
 }
