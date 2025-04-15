@@ -81,8 +81,6 @@ function Home() {
     const faviconUrl = data.logo_favicon.url
 
     if (faviconUrl) {
-      console.log('🟢 Favicon encontrado:', faviconUrl)
-
       // Remove favicons antigos
       const existingIcons = document.querySelectorAll(
         "link[rel='icon'], link[rel='shortcut icon']"
@@ -95,8 +93,6 @@ function Home() {
       link.type = 'image/x-icon'
       link.href = faviconUrl
       document.head.appendChild(link)
-    } else {
-      console.log('⚠️ Favicon não encontrado:', data.logo_favicon)
     }
   }, [data])
 
