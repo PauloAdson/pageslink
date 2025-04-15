@@ -11,9 +11,13 @@ export const theme = {
       secondary: '"Montserrat", sans-serif',
     },
     sizes: {
-      xsmals: '0.8rem',
+      xxsmals: '0.8rem',
+      xsmals: '1.2rem',
       small: '1.6rem',
+
+      xmedium: '2rem',
       medium: '2.4rem',
+
       large: '3.2rem',
       xlarge: '4rem',
       xxlarge: '4.8rem',
@@ -22,11 +26,14 @@ export const theme = {
     },
   },
   media: {
-    lteMedium: '(max-width: 768px)',
+    lteMedium: '(max-width: 999px)',
+    menuSize: '(max-width: 999px)',
   },
   spacings: {
-    xsmals: '0.8rem',
+    xxsmals: '0.8rem',
+    xsmals: '1.2rem',
     small: '1.6rem',
+
     medium: '2.4rem',
     large: '3.2rem',
     xlarge: '4rem',

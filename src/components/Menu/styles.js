@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Container as SectionContainer } from '../SectionContainer/styles'
 import { Title as Heading } from '../Heading/styles'
-import { LogoLink } from '../LogoLink'
 
 const menuVisible = () => css`
   visibility: visible;
@@ -16,7 +15,6 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: ${theme.colors.mediumGray};
     background: ${theme.colors.white};
     transition: all 300ms ease-in-out;
     background: ${$background ? theme.colors.primaryColor : theme.colors.white};
@@ -29,6 +27,11 @@ export const Container = styled.div`
     & ${Heading} {
       margin-top: 0;
       margin-bottom: 0;
+    }
+
+    & nav {
+      font-family: ${theme.font.family.secondary};
+      font-weight: 400;
     }
 
     @media ${theme.media.lteMedium} {
@@ -81,6 +84,7 @@ export const Button = styled.button`
     color: ${theme.colors.white};
     border: none;
     display: none;
+    cursor: pointer;
     pointer-events: ${$visible ? 'none' : 'all'};
 
     @media ${theme.media.lteMedium} {
