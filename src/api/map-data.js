@@ -7,14 +7,16 @@ export const mapData = (pagesData = [{}]) => {
       footer_text: footerHtml = '',
       slug = '',
       title = '',
+      logo_favicon = null,
       sections = [],
       menu = {},
-    } = data
+    } = data.attributes || data
 
     return {
       footerHtml,
       slug,
       title,
+      logo_favicon,
       sections: mapSections(sections),
       menu: mapMenu(menu),
     }

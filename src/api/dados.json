@@ -5,6 +5,7 @@
     "footer_text": "<p><a href=\"https://beacons.page/otaviomiranda\">Feito com ❤ por Otávio Miranda</a></p>",
     "slug": "landing-page",
     "title": "Landing Page",
+    "logo_favicon": "https://res.cloudinary.com/duzybs4in/image/upload/v1744661041/favicon_c45d5e45d8.ico?updatedAt=2025-04-14T20%3A04%3A00.743Z",
     "sections": [
       {
         "__component": "section.section-two-columns",
