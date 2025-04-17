@@ -4,7 +4,7 @@ export const mapMenu = (menu = {}) => {
     logo_text: text = '',
     logo_link: link = '',
     menu_links: links = [],
-    background_menu: background = false,
+    background_menu: background = '',
   } = menu
 
   const srcImg = menu.logo && menu.logo.url ? menu.logo.url : ''

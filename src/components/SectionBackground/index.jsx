@@ -5,7 +5,7 @@ import { SectionContainer } from '../SectionContainer'
 
 export const SectionBackground = ({
   children,
-  background = false,
+  background = '',
   sectionId = '',
 }) => {
   return (
@@ -17,6 +17,6 @@ export const SectionBackground = ({
 
 SectionBackground.propTypes = {
   children: PropTypes.node.isRequired,
-  background: PropTypes.bool,
+  background: PropTypes.string,
   sectionId: PropTypes.string,
 }

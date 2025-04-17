@@ -8,7 +8,7 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import { useState } from 'react'
 
-export const Menu = ({ links = [], logoData, background = false }) => {
+export const Menu = ({ links = [], logoData, background = '' }) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -16,12 +16,13 @@ export const Menu = ({ links = [], logoData, background = false }) => {
       <Styled.Button
         $visible={visible}
         onClick={() => setVisible(true)}
+        $background={background}
         aria-label="Open/Close menu"
       >
         {visible ? (
-          <CloseIcon aria-label="Close menu" />
+          <CloseIcon aria-label="Fechar o menu" />
         ) : (
-          <MenuIcon aria-label="Open menu" />
+          <MenuIcon aria-label="Abrir o menu" />
         )}
       </Styled.Button>
 
@@ -44,4 +45,5 @@ export const Menu = ({ links = [], logoData, background = false }) => {
 Menu.propTypes = {
   ...NavLinks.propTypes,
   logoData: PropTypes.shape(LogoLink.propTypes).isRequired,
+  background: PropTypes.string,
 }

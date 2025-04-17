@@ -25,7 +25,11 @@ export const mapSectionTwoColumns = (section = {}) => {
     title = '',
     description: text = '',
     image: { url: srcImg = '' } = '',
-    metadata: { background = false, section_id: sectionId = '' } = false,
+    // metadata: { background = false, section_id: sectionId = '' } = false,
+    metadata: {
+      color_background: background = '',
+      section_id: sectionId = '',
+    } = false,
     button = null,
   } = section
 
@@ -45,7 +49,12 @@ export const mapSectionContent = (section = {}) => {
     __component: component = '',
     title = '',
     content: html = '',
-    metadata: { background = false, section_id: sectionId = '' } = false,
+    // metadata: { background = false, section_id: sectionId = '' } = false,
+    metadata: {
+      color_background: background = '',
+      section_id: sectionId = '',
+    } = false,
+
     button = null,
   } = section
 
@@ -64,7 +73,12 @@ export const mapTextGrid = (section = {}) => {
     __component: component = '',
     title = '',
     description = '',
-    metadata: { background = false, section_id: sectionId = '' } = {},
+    // metadata: { background = false, section_id: sectionId = '' } = {},
+    metadata: {
+      color_background: background = '',
+      section_id: sectionId = '',
+    } = false,
+
     text_grid: grid = [],
     button = null,
   } = section
@@ -88,7 +102,12 @@ export const mapSectionGridGallery = (section = {}) => {
     __component: component = '',
     title = '',
     description = '',
-    metadata: { background = false, section_id: sectionId = '' } = {},
+    // metadata: { background = false, section_id: sectionId = '' } = {},
+    metadata: {
+      color_background: background = '',
+      section_id: sectionId = '',
+    } = false,
+
     gallery: grid = [],
     button = null,
   } = section

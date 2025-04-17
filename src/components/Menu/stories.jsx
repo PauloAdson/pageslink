@@ -1,3 +1,4 @@
+import { color } from 'storybook/internal/theming'
 import { Menu } from '.'
 import linksMock from '../NavLinks/mock'
 
@@ -11,7 +12,9 @@ export default {
       link: '#target',
       srcImg: '',
     },
-    background: false,
+  },
+  argTypes: {
+    background: { control: color },
   },
 }
 

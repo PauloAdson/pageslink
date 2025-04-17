@@ -7,6 +7,11 @@ const menuVisible = () => css`
   opacity: 1;
 `
 
+const backgroundColor = (theme, $background) => css`
+  background: ${$background};
+  color: ${theme.colors.white};
+`
+
 export const Container = styled.div`
   ${({ theme, $visible, $background }) => css`
     position: fixed;
@@ -15,9 +20,13 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     width: 100%;
-    background: ${theme.colors.white};
     transition: all 300ms ease-in-out;
-    background: ${$background ? theme.colors.primaryColor : theme.colors.white};
+    ${$background
+      ? backgroundColor(theme, $background)
+      : css`
+          background: ${theme.colors.white};
+          color: ${theme.colors.primaryColor};
+        `}
 
     > ${SectionContainer} {
       padding-top: 1.4rem;
@@ -73,15 +82,19 @@ export const MenuContainer = styled.div`
 `
 
 export const Button = styled.button`
-  ${({ theme, $visible }) => css`
+  ${({ theme, $visible, $background }) => css`
     z-index: 6;
     position: fixed;
     top: 2rem;
     right: 2rem;
     width: 4rem;
     height: 4rem;
-    background: ${theme.colors.primaryColor};
-    color: ${theme.colors.white};
+    ${$visible
+      ? css`
+          background: ${theme.colors.white};
+          color: ${theme.colors.primaryColor};
+        `
+      : backgroundColor(theme, $background)}
     border: none;
     display: none;
     cursor: pointer;

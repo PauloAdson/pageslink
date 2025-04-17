@@ -1,3 +1,4 @@
+import { color } from 'storybook/internal/theming'
 import { SectionBackground } from '.'
 
 export default {
@@ -18,6 +19,7 @@ export default {
   },
   argTypes: {
     children: { type: '' },
+    background: { control: color },
   },
 }
 
