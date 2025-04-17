@@ -34,6 +34,7 @@ export const theme = {
     xsmals: '1.2rem',
     small: '1.6rem',
 
+    xmedium: '2rem',
     medium: '2.4rem',
     large: '3.2rem',
     xlarge: '4rem',

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { Title as HeadingContainer } from '../Heading/styles'
 import { Container as TextComponent } from '../TextComponent/styles'
 
 export const Container = styled.div`
@@ -36,5 +35,14 @@ export const Image = styled.img`
     &:hover {
       transform: scale(1.2) rotate(10deg);
     }
+  `}
+`
+
+export const ButtonGridImage = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: ${theme.spacings.large};
   `}
 `

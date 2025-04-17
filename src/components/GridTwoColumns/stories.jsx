@@ -9,7 +9,9 @@ export default {
     srcImg: 'assets/images/javascript.svg',
   },
   argTypes: {
-    children: { type: 'string' },
+    title: { type: 'string' },
+    text: { type: 'string' },
+    srcImg: { type: 'string' },
   },
 }
 

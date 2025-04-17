@@ -3,6 +3,7 @@ import * as Styled from './styles'
 import { SectionBackground } from '../SectionBackground'
 import { Heading } from '../Heading'
 import { TextComponent } from '../TextComponent'
+import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const GridText = ({
   title,
@@ -10,6 +11,7 @@ export const GridText = ({
   grid,
   background = false,
   sectionId = '',
+  button = {},
 }) => {
   return (
     <SectionBackground
@@ -20,17 +22,25 @@ export const GridText = ({
         <Heading size="huge" uppercase colorDark={!background} as="h2">
           {title}
         </Heading>
+
         <TextComponent>{description}</TextComponent>
+
         <Styled.Grid>
           {grid.map((el) => (
             <Styled.GridElement key={el.title}>
               <Heading size="medium" colorDark={!background} as="h3">
                 {el.title}
               </Heading>
+
               <TextComponent>{el.description}</TextComponent>
             </Styled.GridElement>
           ))}
         </Styled.Grid>
+        {button && button.children && (
+          <Styled.ButtonGridText>
+            <ButtonAction {...button} />
+          </Styled.ButtonGridText>
+        )}
       </Styled.Container>
     </SectionBackground>
   )
@@ -47,4 +57,5 @@ GridText.propTypes = {
     })
   ).isRequired,
   sectionId: PropTypes.string,
+  button: PropTypes.object,
 }

@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import { Heading } from '../Heading'
 import { SectionBackground } from '../SectionBackground'
 import { TextComponent } from '../TextComponent'
+import { ButtonAction } from '../ButtonAction/ButtonAction'
+
 import * as Styled from './styles'
 
 export const GridImage = ({
@@ -20,7 +22,9 @@ export const GridImage = ({
         <Heading size="huge" uppercase colorDark={!background} as="h2">
           {title}
         </Heading>
+
         <TextComponent>{description}</TextComponent>
+
         <Styled.Grid>
           {grid
             .filter((el) => el && el.srcImg) // evita itens nulos ou sem imagem
@@ -30,6 +34,10 @@ export const GridImage = ({
               </Styled.GridElement>
             ))}
         </Styled.Grid>
+
+        <Styled.ButtonGridImage>
+          {/* <ButtonAction>Começar Agora</ButtonAction> */}
+        </Styled.ButtonGridImage>
       </Styled.Container>
     </SectionBackground>
   )

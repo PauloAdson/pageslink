@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Title } from '../Heading/styles'
+import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -34,5 +35,26 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   ${() => css`
     width: 100%;
+  `}
+`
+
+export const ButtonDesktop = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large};
+    @media ${theme.media.lteMedium} {
+      display: none;
+    }
+  `}
+`
+export const ButtonMobile = styled.div`
+  ${({ theme }) => css`
+    display: none;
+    margin-top: ${theme.spacings.large};
+
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `}
 `

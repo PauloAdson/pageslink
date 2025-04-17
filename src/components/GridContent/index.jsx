@@ -3,13 +3,14 @@ import { Heading } from '../Heading'
 import { SectionBackground } from '../SectionBackground'
 import { TextComponent } from '../TextComponent'
 import * as Styled from './styles'
-import { SectionContainer } from '../SectionContainer'
+import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const GridContent = ({
   title,
   html,
   background = false,
   sectionId = '',
+  button = {},
 }) => {
   return (
     <SectionBackground
@@ -23,6 +24,11 @@ export const GridContent = ({
         <Styled.Html>
           <TextComponent>{html}</TextComponent>
         </Styled.Html>
+        {button && button.children && (
+          <Styled.ButtonContent>
+            <ButtonAction>Começar Agora</ButtonAction>
+          </Styled.ButtonContent>
+        )}
       </Styled.Container>
     </SectionBackground>
   )
@@ -33,4 +39,5 @@ GridContent.propTypes = {
   html: PropTypes.string.isRequired,
   background: PropTypes.bool,
   sectionId: PropTypes.string,
+  button: PropTypes.object,
 }

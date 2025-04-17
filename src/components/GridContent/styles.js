@@ -13,3 +13,10 @@ export const Html = styled.div`
     margin: ${theme.spacings.xhuge} 0;
   `}
 `
+export const ButtonContent = styled.div`
+  ${() => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
+`

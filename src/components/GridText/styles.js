@@ -43,3 +43,11 @@ export const GridElement = styled.div`
     }
   `}
 `
+
+export const ButtonGridText = styled.div`
+  ${() => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
+`

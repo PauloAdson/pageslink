@@ -3,6 +3,7 @@ import * as Styled from './styles'
 import { SectionBackground } from '../SectionBackground'
 import { Heading } from '../Heading'
 import { TextComponent } from '../TextComponent'
+import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const GridTwoColumns = ({
   title,
@@ -10,7 +11,10 @@ export const GridTwoColumns = ({
   srcImg,
   background = false,
   sectionId = '',
+  button = {},
 }) => {
+  console.log('button', button)
+
   return (
     <SectionBackground
       background={background || undefined}
@@ -18,13 +22,26 @@ export const GridTwoColumns = ({
     >
       <Styled.Container $background={!!background}>
         <Styled.TextContainer>
-          <Heading uppercase colorDark={!background} as="h2">
+          <Heading uppercase colorDark={!background} as="h1">
             {title}
           </Heading>
           <TextComponent>{text}</TextComponent>
+
+          {button && button.children && (
+            <Styled.ButtonDesktop>
+              {button && <ButtonAction {...button} />}
+            </Styled.ButtonDesktop>
+          )}
         </Styled.TextContainer>
+
         <Styled.ImageContainer>
           <Styled.Image src={srcImg} alt={title} />
+
+          {button && button.children && (
+            <Styled.ButtonMobile>
+              {button && <ButtonAction {...button} />}
+            </Styled.ButtonMobile>
+          )}
         </Styled.ImageContainer>
       </Styled.Container>
     </SectionBackground>
@@ -37,4 +54,5 @@ GridTwoColumns.propTypes = {
   srcImg: PropTypes.string.isRequired,
   background: PropTypes.bool,
   sectionId: PropTypes.string,
+  button: PropTypes.object,
 }

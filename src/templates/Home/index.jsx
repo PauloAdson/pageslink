@@ -115,24 +115,24 @@ function Home() {
         logoData={{ text, link, srcImg }}
       >
         {sections.map((section, index) => {
-          const { component } = section
+          const { component, button = {} } = section
 
           const key = `${slug}-${index}`
 
           if (component === 'section.section-two-columns') {
-            return <GridTwoColumns key={key} {...section} />
+            return <GridTwoColumns key={key} {...section} button={button} />
           }
 
           if (component === 'section.section-content') {
-            return <GridContent key={key} {...section} />
+            return <GridContent key={key} {...section} button={button} />
           }
 
           if (component === 'section.section-grid-text') {
-            return <GridText key={key} {...section} />
+            return <GridText key={key} {...section} button={button} />
           }
 
           if (component === 'section.section-grid-gallery') {
-            return <GridImage key={key} {...section} />
+            return <GridImage key={key} {...section} button={button} />
           }
 
           return null

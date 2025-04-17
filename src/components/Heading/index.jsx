@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const Heading = ({
   children,
   colorDark = true,
-  as = 'h1',
+  as = 'h2',
   size = 'huge',
   uppercase = false,
 }) => {

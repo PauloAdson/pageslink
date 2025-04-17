@@ -1,3 +1,5 @@
+import { mapButton } from './map-button'
+
 export const mapSections = (sections = []) => {
   return sections.map((section) => {
     if (section.__component === 'section.section-two-columns') {
@@ -24,6 +26,7 @@ export const mapSectionTwoColumns = (section = {}) => {
     description: text = '',
     image: { url: srcImg = '' } = '',
     metadata: { background = false, section_id: sectionId = '' } = false,
+    button = null,
   } = section
 
   return {
@@ -33,6 +36,7 @@ export const mapSectionTwoColumns = (section = {}) => {
     srcImg,
     background,
     sectionId,
+    button: mapButton(button),
   }
 }
 
@@ -42,6 +46,7 @@ export const mapSectionContent = (section = {}) => {
     title = '',
     content: html = '',
     metadata: { background = false, section_id: sectionId = '' } = false,
+    button = null,
   } = section
 
   return {
@@ -50,6 +55,7 @@ export const mapSectionContent = (section = {}) => {
     background,
     sectionId,
     html,
+    button: mapButton(button),
   }
 }
 
@@ -60,6 +66,7 @@ export const mapTextGrid = (section = {}) => {
     description = '',
     metadata: { background = false, section_id: sectionId = '' } = {},
     text_grid: grid = [],
+    button = null,
   } = section
 
   return {
@@ -72,6 +79,7 @@ export const mapTextGrid = (section = {}) => {
       const { title = '', description = '' } = text
       return { title, description }
     }),
+    button: mapButton(button),
   }
 }
 
@@ -82,6 +90,7 @@ export const mapSectionGridGallery = (section = {}) => {
     description = '',
     metadata: { background = false, section_id: sectionId = '' } = {},
     gallery: grid = [],
+    button = null,
   } = section
 
   return {
@@ -94,5 +103,6 @@ export const mapSectionGridGallery = (section = {}) => {
       srcImg: img.url || '',
       altText: img.alternativeText || '',
     })),
+    button: mapButton(button),
   }
 }
