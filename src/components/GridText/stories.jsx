@@ -1,4 +1,4 @@
-import { GridText } from '.'
+import { GridText } from './GridText'
 
 import mock from './mock'
 

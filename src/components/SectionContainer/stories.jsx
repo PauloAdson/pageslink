@@ -1,4 +1,4 @@
-import { SectionContainer } from '.'
+import { SectionContainer } from './SectionContainer'
 
 export default {
   title: 'SectionContainer',

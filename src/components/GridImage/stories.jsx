@@ -1,4 +1,4 @@
-import { GridImage } from '.'
+import { GridImage } from './GridImage'
 
 import mock from './mock'
 

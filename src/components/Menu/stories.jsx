@@ -1,5 +1,5 @@
 import { color } from 'storybook/internal/theming'
-import { Menu } from '.'
+import { Menu } from './Menu'
 import linksMock from '../NavLinks/mock'
 
 export default {

@@ -1,5 +1,5 @@
 import { color } from 'storybook/internal/theming'
-import { SectionBackground } from '.'
+import { SectionBackground } from './SectionBackground'
 
 export default {
   title: 'SectionBackground',

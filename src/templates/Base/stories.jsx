@@ -1,4 +1,4 @@
-import { Base } from '.'
+import { Base } from './Base'
 
 import { mockBase } from './mock'
 

@@ -1,4 +1,4 @@
-import { GridContent } from '.'
+import { GridContent } from './GridContent'
 
 import mock from './mock'
 

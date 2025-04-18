@@ -1,4 +1,4 @@
-import { GridTwoColumns } from '.'
+import { GridTwoColumns } from './GridTwoColumns'
 
 export default {
   title: 'GridTwoColumns',

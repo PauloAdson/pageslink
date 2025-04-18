@@ -1,4 +1,4 @@
-import { LogoLink } from '.'
+import { LogoLink } from './LogoLink'
 
 export default {
   title: 'LogoLink',

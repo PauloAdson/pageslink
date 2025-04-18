@@ -1,4 +1,4 @@
-import { MenuLink } from '.'
+import { MenuLink } from './MenuLink'
 
 export default {
   title: 'MenuLink',
