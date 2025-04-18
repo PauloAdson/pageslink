@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { Title } from '../Heading/styles'
-import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const Container = styled.div`
   ${({ theme }) => css`

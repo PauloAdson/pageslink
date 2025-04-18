@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { Heading } from '../Heading'
-import { SectionBackground } from '../SectionBackground'
-import { TextComponent } from '../TextComponent'
+import { Heading } from '../Heading/Heading'
+import { SectionBackground } from '../SectionBackground/SectionBackground'
+import { TextComponent } from '../TextComponent/TextComponent'
 import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 import * as Styled from './styles'
@@ -12,6 +12,7 @@ export const GridImage = ({
   grid,
   background = false,
   sectionId = '',
+  button = {},
 }) => {
   return (
     <SectionBackground
@@ -35,9 +36,11 @@ export const GridImage = ({
             ))}
         </Styled.Grid>
 
-        <Styled.ButtonGridImage>
-          {/* <ButtonAction>Começar Agora</ButtonAction> */}
-        </Styled.ButtonGridImage>
+        {button && button.children && (
+          <Styled.ButtonGridImage>
+            {button && <ButtonAction {...button} />}
+          </Styled.ButtonGridImage>
+        )}
       </Styled.Container>
     </SectionBackground>
   )
@@ -54,4 +57,5 @@ GridImage.propTypes = {
     })
   ).isRequired,
   sectionId: PropTypes.string,
+  button: PropTypes.object,
 }

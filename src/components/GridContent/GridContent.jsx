@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { Heading } from '../Heading'
-import { SectionBackground } from '../SectionBackground'
-import { TextComponent } from '../TextComponent'
+import { Heading } from '../Heading/Heading'
+import { SectionBackground } from '../SectionBackground/SectionBackground'
+import { TextComponent } from '../TextComponent/TextComponent'
 import * as Styled from './styles'
 import { ButtonAction } from '../ButtonAction/ButtonAction'
 
@@ -26,7 +26,7 @@ export const GridContent = ({
         </Styled.Html>
         {button && button.children && (
           <Styled.ButtonContent>
-            <ButtonAction>Começar Agora</ButtonAction>
+            {button && <ButtonAction {...button} />}
           </Styled.ButtonContent>
         )}
       </Styled.Container>

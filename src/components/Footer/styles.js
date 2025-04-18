@@ -14,10 +14,5 @@ export const Container = styled.footer`
     & ${TextComponent} {
       font-size: ${theme.font.sizes.small};
     }
-
-    /* & ${SectionContainer} {
-      padding-top: 0;
-      padding-bottom: 0;
-    } */
   `}
 `

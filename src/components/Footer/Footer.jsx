@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import * as Styled from './styles'
-import { TextComponent } from '../TextComponent'
-import { SectionContainer } from '../SectionContainer'
+import { TextComponent } from '../TextComponent/TextComponent'
+import { SectionContainer } from '../SectionContainer/SectionContainer'
 
 export const Footer = ({ footerHtml }) => {
   return (

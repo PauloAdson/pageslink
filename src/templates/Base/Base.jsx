@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import * as Styled from './styles'
-import { Menu } from '../../components/Menu'
-import { GoTop } from '../../components/GoTop'
+import { Menu } from '../../components/Menu/Menu'
+import { GoTop } from '../../components/GoTop/GoTop'
 import { Copyright } from '../../components/Copyright/Copyright'
 
 export const Base = ({ links, background, logoData, children }) => {

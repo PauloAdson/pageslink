@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 
-import { GridTwoColumns } from '../../components/GridTwoColumns'
-import { GridContent } from '../../components/GridContent'
-import { GridText } from '../../components/GridText'
-import { GridImage } from '../../components/GridImage'
+import { GridTwoColumns } from '../../components/GridTwoColumns/GridTwoColumns'
+import { GridContent } from '../../components/GridContent/GridContent'
+import { GridText } from '../../components/GridText/GridText'
+import { GridImage } from '../../components/GridImage/GridImage'
 
-import { PageNotFound } from '../PageNotFound'
-import { Base } from '../Base'
-import { Loading } from '../Loading'
+import { PageNotFound } from '../PageNotFound/PageNotFound'
+import { Base } from '../Base/Base'
+import { Loading } from '../Loading/Loading'
 
 import { mapData } from '../../api/map-data'
 
 import { useLocation } from 'react-router-dom'
-import { Footer } from '../../components/Footer'
+import { Footer } from '../../components/Footer/Footer'
 
 function Home() {
   const [data, setData] = useState(null)

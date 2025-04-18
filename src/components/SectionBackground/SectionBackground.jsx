@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 import * as Styled from './styles'
-import { SectionContainer } from '../SectionContainer'
+import { SectionContainer } from '../SectionContainer/SectionContainer'
 
 export const SectionBackground = ({
   children,

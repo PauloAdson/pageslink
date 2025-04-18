@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import * as Styled from './styles'
-import { MenuLink } from '../MenuLink'
+import { MenuLink } from '../MenuLink/MenuLink'
 
 export const NavLinks = ({ links = [], background }) => {
   return (

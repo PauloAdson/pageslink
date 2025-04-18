@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import * as Styled from './styles'
 import { KeyboardArrowUp } from '@styled-icons/material-outlined/KeyboardArrowUp'
 

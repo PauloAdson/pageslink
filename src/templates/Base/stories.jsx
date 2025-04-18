@@ -1,7 +1,6 @@
 import { Base } from '.'
 
 import { mockBase } from './mock'
-import { GridText } from '../../components/GridText'
 
 export default {
   title: 'Templates/Base',

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import * as Styled from './styles'
-import { SectionBackground } from '../SectionBackground'
-import { Heading } from '../Heading'
-import { TextComponent } from '../TextComponent'
+import { SectionBackground } from '../SectionBackground/SectionBackground'
+import { Heading } from '../Heading/Heading'
+import { TextComponent } from '../TextComponent/TextComponent'
 import { ButtonAction } from '../ButtonAction/ButtonAction'
 
 export const GridTwoColumns = ({
@@ -13,8 +13,6 @@ export const GridTwoColumns = ({
   sectionId = '',
   button = {},
 }) => {
-  console.log('button', button)
-
   return (
     <SectionBackground
       background={background || undefined}

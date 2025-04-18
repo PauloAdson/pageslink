@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 
 import { GlobalStyles } from './styles/global-styles.js'
 import { theme } from './styles/theme.js'
-import Home from './templates/Home/index.jsx'
+import Home from './templates/Home/Home.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
