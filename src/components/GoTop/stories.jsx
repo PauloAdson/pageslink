@@ -1,4 +1,4 @@
-import { GoTop } from '.'
+import { GoTop } from './GoTop'
 
 export default {
   title: 'GoTop',
