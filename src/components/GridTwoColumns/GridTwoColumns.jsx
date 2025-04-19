@@ -9,21 +9,20 @@ export const GridTwoColumns = ({
   title,
   text,
   srcImg,
-  background = false,
+  background = '',
+  color = '',
   sectionId = '',
   button = {},
 }) => {
   return (
-    <SectionBackground
-      background={background || undefined}
-      sectionId={sectionId}
-    >
-      <Styled.Container $background={!!background}>
+    <SectionBackground background={background} sectionId={sectionId}>
+      <Styled.Container $background={background}>
         <Styled.TextContainer>
-          <Heading uppercase colorDark={!background} as="h1">
+          <Heading uppercase $color={color} as="h1">
             {title}
           </Heading>
-          <TextComponent>{text}</TextComponent>
+
+          <TextComponent $color={color}>{text}</TextComponent>
 
           {button && button.children && (
             <Styled.ButtonDesktop>
@@ -50,7 +49,8 @@ GridTwoColumns.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   srcImg: PropTypes.string.isRequired,
-  background: PropTypes.bool,
+  background: PropTypes.string,
+  color: PropTypes.string,
   sectionId: PropTypes.string,
   button: PropTypes.object,
 }

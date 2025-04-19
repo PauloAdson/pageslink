@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.nav`
-  ${({ theme, $background }) => css`
+  ${({ theme, $color }) => css`
     display: flex;
     flex-flow: row wrap;
 
     a {
-      color: ${$background ? theme.colors.white : theme.colors.primaryColor};
+      color: ${$color};
     }
 
     @media ${theme.media.menuSize} {

@@ -5,6 +5,7 @@ export const mapMenu = (menu = {}) => {
     logo_link: link = '',
     menu_links: links = [],
     background_menu: background = '',
+    color_text: color = '',
   } = menu
 
   const srcImg = menu.logo && menu.logo.url ? menu.logo.url : ''
@@ -16,6 +17,7 @@ export const mapMenu = (menu = {}) => {
     srcImg,
     links: mapMenuLinks(links),
     background,
+    color,
   }
 }
 

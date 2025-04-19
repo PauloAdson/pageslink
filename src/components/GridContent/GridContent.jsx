@@ -8,21 +8,19 @@ import { ButtonAction } from '../ButtonAction/ButtonAction'
 export const GridContent = ({
   title,
   html,
-  background = false,
+  background = '',
+  color = '',
   sectionId = '',
   button = {},
 }) => {
   return (
-    <SectionBackground
-      background={background || undefined}
-      sectionId={sectionId}
-    >
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container>
-        <Heading uppercase colorDark={!background} as="h2">
+        <Heading uppercase $color={color} as="h2">
           {title}
         </Heading>
         <Styled.Html>
-          <TextComponent>{html}</TextComponent>
+          <TextComponent $color={color}>{html}</TextComponent>
         </Styled.Html>
         {button && button.children && (
           <Styled.ButtonContent>
@@ -37,7 +35,8 @@ export const GridContent = ({
 GridContent.propTypes = {
   title: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
-  background: PropTypes.bool,
+  background: PropTypes.string,
+  color: PropTypes.string,
   sectionId: PropTypes.string,
   button: PropTypes.object,
 }

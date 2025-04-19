@@ -27,6 +27,7 @@ export const mapSectionTwoColumns = (section = {}) => {
     image: { url: srcImg = '' } = '',
     metadata: {
       color_background: background = '',
+      color_text: color = '',
       section_id: sectionId = '',
     } = false,
     button = null,
@@ -38,6 +39,7 @@ export const mapSectionTwoColumns = (section = {}) => {
     text,
     srcImg,
     background,
+    color,
     sectionId,
     button: mapButton(button),
   }
@@ -50,6 +52,7 @@ export const mapSectionContent = (section = {}) => {
     content: html = '',
     metadata: {
       color_background: background = '',
+      color_text: color = '',
       section_id: sectionId = '',
     } = false,
 
@@ -60,6 +63,7 @@ export const mapSectionContent = (section = {}) => {
     component,
     title,
     background,
+    color,
     sectionId,
     html,
     button: mapButton(button),
@@ -73,6 +77,7 @@ export const mapTextGrid = (section = {}) => {
     description = '',
     metadata: {
       color_background: background = '',
+      color_text: color = '',
       section_id: sectionId = '',
     } = false,
 
@@ -84,6 +89,7 @@ export const mapTextGrid = (section = {}) => {
     component: 'section.section-grid-text',
     title,
     background,
+    color,
     sectionId,
     description,
     grid: grid.map((text) => {
@@ -101,6 +107,7 @@ export const mapSectionGridGallery = (section = {}) => {
     description = '',
     metadata: {
       color_background: background = '',
+      color_text: color = '',
       section_id: sectionId = '',
     } = false,
 
@@ -113,6 +120,7 @@ export const mapSectionGridGallery = (section = {}) => {
     title,
     description,
     background,
+    color,
     sectionId,
     grid: grid.map((img) => ({
       srcImg: img.url || '',

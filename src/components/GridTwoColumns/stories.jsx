@@ -12,6 +12,8 @@ export default {
     title: { type: 'string' },
     text: { type: 'string' },
     srcImg: { type: 'string' },
+    background: { control: 'color' },
+    color: { control: 'color' },
   },
 }
 

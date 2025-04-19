@@ -4,10 +4,15 @@ import { Menu } from '../../components/Menu/Menu'
 import { GoTop } from '../../components/GoTop/GoTop'
 import { Copyright } from '../../components/Copyright/Copyright'
 
-export const Base = ({ links, background, logoData, children }) => {
+export const Base = ({ links, background, color, logoData, children }) => {
   return (
     <>
-      <Menu links={links} logoData={logoData} background={background} />
+      <Menu
+        links={links}
+        logoData={logoData}
+        background={background}
+        color={color}
+      />
       <Styled.Container>
         {children}
         <Copyright />
@@ -20,5 +25,6 @@ export const Base = ({ links, background, logoData, children }) => {
 Base.propTypes = {
   children: PropTypes.node.isRequired,
   ...Menu.propTypes,
-  background: PropTypes.bool,
+  background: PropTypes.string,
+  color: PropTypes.string,
 }

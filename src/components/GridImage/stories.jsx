@@ -6,6 +6,9 @@ export default {
   title: 'GridImage',
   component: GridImage,
   args: mock,
+  argType: {
+    background: { control: 'color' },
+  },
 }
 
 export const Template = (args) => {

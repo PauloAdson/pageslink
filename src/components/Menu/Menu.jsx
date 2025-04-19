@@ -8,7 +8,7 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import { useState } from 'react'
 
-export const Menu = ({ links = [], logoData, background = '' }) => {
+export const Menu = ({ links = [], logoData, background = '', color = '' }) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -17,6 +17,7 @@ export const Menu = ({ links = [], logoData, background = '' }) => {
         $visible={visible}
         onClick={() => setVisible(true)}
         $background={background}
+        $color={color}
         aria-label="Open/Close menu"
       >
         {visible ? (
@@ -33,8 +34,8 @@ export const Menu = ({ links = [], logoData, background = '' }) => {
       >
         <SectionContainer>
           <Styled.MenuContainer>
-            <LogoLink {...logoData} $background={background} />
-            <NavLinks links={links} background={background} />
+            <LogoLink {...logoData} $background={background} $color={color} />
+            <NavLinks links={links} $background={background} $color={color} />
           </Styled.MenuContainer>
         </SectionContainer>
       </Styled.Container>
@@ -46,4 +47,5 @@ Menu.propTypes = {
   ...NavLinks.propTypes,
   logoData: PropTypes.shape(LogoLink.propTypes).isRequired,
   background: PropTypes.string,
+  color: PropTypes.string,
 }

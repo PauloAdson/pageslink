@@ -10,21 +10,19 @@ export const GridImage = ({
   title,
   description,
   grid,
-  background = false,
+  background = '',
+  color = '',
   sectionId = '',
   button = {},
 }) => {
   return (
-    <SectionBackground
-      background={background || undefined}
-      sectionId={sectionId}
-    >
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container>
-        <Heading size="huge" uppercase colorDark={!background} as="h2">
+        <Heading size="huge" uppercase as="h2" $color={color}>
           {title}
         </Heading>
 
-        <TextComponent>{description}</TextComponent>
+        <TextComponent $color={color}>{description}</TextComponent>
 
         <Styled.Grid>
           {grid
@@ -47,7 +45,8 @@ export const GridImage = ({
 }
 
 GridImage.propTypes = {
-  background: PropTypes.bool,
+  background: PropTypes.string,
+  color: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   grid: PropTypes.arrayOf(

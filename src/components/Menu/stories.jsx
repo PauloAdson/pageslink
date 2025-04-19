@@ -15,6 +15,7 @@ export default {
   },
   argTypes: {
     background: { control: color },
+    color: { control: color },
   },
 }
 

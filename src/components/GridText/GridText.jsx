@@ -9,30 +9,28 @@ export const GridText = ({
   title,
   description,
   grid,
-  background = false,
+  background = '',
+  color = '',
   sectionId = '',
   button = {},
 }) => {
   return (
-    <SectionBackground
-      background={background || undefined}
-      sectionId={sectionId}
-    >
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container>
-        <Heading size="huge" uppercase colorDark={!background} as="h2">
+        <Heading size="huge" uppercase $color={color} as="h2">
           {title}
         </Heading>
 
-        <TextComponent>{description}</TextComponent>
+        <TextComponent $color={color}>{description}</TextComponent>
 
         <Styled.Grid>
           {grid.map((el) => (
             <Styled.GridElement key={el.title}>
-              <Heading size="medium" colorDark={!background} as="h3">
+              <Heading size="medium" $color={color} as="h3">
                 {el.title}
               </Heading>
 
-              <TextComponent>{el.description}</TextComponent>
+              <TextComponent $color={color}>{el.description}</TextComponent>
             </Styled.GridElement>
           ))}
         </Styled.Grid>
@@ -47,9 +45,10 @@ export const GridText = ({
 }
 
 GridText.propTypes = {
-  background: PropTypes.bool,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  background: PropTypes.string,
+  color: PropTypes.string,
   grid: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

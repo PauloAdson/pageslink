@@ -4,18 +4,13 @@ import PropTypes from 'prop-types'
 
 export const Heading = ({
   children,
-  colorDark = true,
   as = 'h2',
   size = 'huge',
+  $color,
   uppercase = false,
 }) => {
   return (
-    <Styled.Title
-      $colorDark={colorDark}
-      as={as}
-      size={size}
-      $uppercase={uppercase}
-    >
+    <Styled.Title $color={$color} as={as} size={size} $uppercase={uppercase}>
       {children}
     </Styled.Title>
   )
@@ -23,7 +18,7 @@ export const Heading = ({
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  colorDark: PropTypes.bool,
+  $color: PropTypes.string,
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']),
   uppercase: PropTypes.bool,

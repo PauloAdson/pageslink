@@ -12,7 +12,7 @@ export const Container = styled.a`
     height: 4rem;
     bottom: 2rem;
     right: 2rem;
-    z-index: 6;
+    z-index: 1;
     border-radius: 50%;
   `}
 `

@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components'
 
 export const Container = styled.a`
-  ${({ theme }) => css`
+  ${({ theme, $color }) => css`
     display: flex;
     text-decoration: none;
-    color: inherit;
-
+    color: ${$color};
     > img {
       max-height: 6rem;
     }

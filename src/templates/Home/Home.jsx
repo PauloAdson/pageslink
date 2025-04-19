@@ -104,7 +104,7 @@ function Home() {
   }
 
   const { menu, sections, footerHtml, slug } = data
-  const { links, text, link, srcImg, background } = menu
+  const { links, text, link, srcImg, background, color } = menu
 
   return (
     <>
@@ -112,6 +112,7 @@ function Home() {
         links={links}
         footerHtml={footerHtml}
         background={background}
+        color={color}
         logoData={{ text, link, srcImg }}
       >
         {sections.map((section, index) => {

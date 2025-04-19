@@ -9,7 +9,6 @@ const menuVisible = () => css`
 
 const backgroundColor = (theme, $background) => css`
   background: ${$background};
-  color: ${theme.colors.white};
 `
 
 export const Container = styled.div`
@@ -82,7 +81,7 @@ export const MenuContainer = styled.div`
 `
 
 export const Button = styled.button`
-  ${({ theme, $visible, $background }) => css`
+  ${({ theme, $visible, $background, $color }) => css`
     z-index: 6;
     position: fixed;
     top: 2rem;
@@ -91,10 +90,13 @@ export const Button = styled.button`
     height: 4rem;
     ${$visible
       ? css`
-          background: ${theme.colors.white};
-          color: ${theme.colors.primaryColor};
+          background: ${$color};
+          color: ${$background};
         `
-      : backgroundColor(theme, $background)}
+      : css`
+          ${backgroundColor(theme, $background)}
+          color: ${$color};
+        `}
     border: none;
     display: none;
     cursor: pointer;
