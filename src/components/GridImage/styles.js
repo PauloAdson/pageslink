@@ -44,5 +44,6 @@ export const ButtonGridImage = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: ${theme.spacings.large};
+    margin-bottom: ${theme.spacings.large};
   `}
 `

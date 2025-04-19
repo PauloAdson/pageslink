@@ -27,7 +27,6 @@ export const theme = {
   },
   media: {
     lteMedium: '(max-width: 999px)',
-    menuSize: '(max-width: 999px)',
   },
   spacings: {
     xxsmals: '0.8rem',

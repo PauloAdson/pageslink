@@ -29,12 +29,23 @@ export const TextContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  ${() => css``}
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+    }
+  `}
 `
 
 export const Image = styled.img`
   ${() => css`
-    width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 500px;
   `}
 `
 
@@ -49,6 +60,7 @@ export const ButtonDesktop = styled.div`
 export const ButtonMobile = styled.div`
   ${({ theme }) => css`
     display: none;
+    width: 100%;
     margin-top: ${theme.spacings.large};
 
     @media ${theme.media.lteMedium} {
