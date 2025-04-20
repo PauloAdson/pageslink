@@ -23,7 +23,10 @@ Esta é a **versão frontend**, desenvolvida com **React + Vite**, utilizando um
 - Personalizar cores de fundo e das fontes  
 - Criar páginas únicas com agilidade e visual atrativo  
 
-[PagesLink](https://pageslink.netlify.app/)
+## ℹ️ Aviso
+
+> O carregamento da página pode demorar um pouco (em torno de 1 minuto) nas primeiras requisições.  
+> Isso acontece porque o servidor utilizado na API está hospedado em um plano gratuito, que pode levar mais tempo para iniciar após um período de inatividade.
 
 ### 🔗 Backend
 
