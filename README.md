@@ -71,3 +71,7 @@ Na raiz do projeto, você pode rodar:
 "react-dom": "^19.0.0",
 "react-router-dom": "^7.5.0",
 "styled-components": "^6.1.16"
+```
+![screencapture-pageslink-netlify-app-2025-04-20-00_59_30](https://github.com/user-attachments/assets/e36e33e1-d032-4567-9932-93205ef591db)
+
+
