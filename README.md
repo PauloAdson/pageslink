@@ -10,9 +10,20 @@
 
 ## 📌 Sobre o projeto
 
-O **PagesLink** é uma aplicação desenvolvida com o objetivo de tornar simples e acessível a criação de sites personalizados, mesmo para usuários sem conhecimento técnico em programação.  
+**PagesLink** é uma aplicação desenvolvida com o objetivo de tornar simples e acessível a criação de sites personalizados, mesmo para usuários sem conhecimento técnico em programação.
 
-Essa é a versão **frontend**, desenvolvida com **React + Vite**, utilizando uma stack moderna para performance, componentização e escalabilidade.
+Esta é a **versão frontend**, desenvolvida com **React + Vite**, utilizando uma stack moderna que garante performance, componentização e escalabilidade.
+
+### 🔧 Funcionalidades
+
+- Alterar textos, imagens e links com facilidade  
+- Personalizar cores de fundo e das fontes  
+- Criar páginas únicas com agilidade e visual atrativo  
+
+### 🔗 Backend
+
+O repositório da API utilizada neste projeto está disponível aqui:  
+👉 [backend-landing-pages](https://github.com/PauloAdson/backend-landing-pages)
 
 ---
 
