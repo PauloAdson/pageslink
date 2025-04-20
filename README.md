@@ -1,12 +1,34 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 PagesLink
 
-Currently, two official plugins are available:
+**Facilitando a criação de sites para quem não entende de programação.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Sobre o projeto
+
+O **PagesLink** é uma aplicação desenvolvida com o objetivo de tornar simples e acessível a criação de sites personalizados, mesmo para usuários sem conhecimento técnico em programação.  
+
+Essa é a versão **frontend**, desenvolvida com **React + Vite**, utilizando uma stack moderna para performance, componentização e escalabilidade.
+
+---
+
+## 🧪 Tecnologias e Ferramentas
+
+- ⚛️ **React 19**
+- ⚡ **Vite**
+- 💅 **styled-components**
+- 🌐 **react-router-dom**
+- 📦 **PropTypes**
+- 🧩 **Storybook** – documentação de componentes
+- 🧹 **ESLint + Prettier** – padronização e qualidade de código
+- ✅ **Vitest** – testes unitários
+- 🧪 **Playwright** – testes de interface
+
+---
+
+## 📁 Estrutura do Projeto
+
