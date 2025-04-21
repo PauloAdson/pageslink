@@ -33,7 +33,7 @@ Esta é a **versão frontend**, desenvolvida com **React + Vite**, utilizando um
 ### 🔗 Backend
 
 O repositório da API utilizada neste projeto está disponível aqui:  
-👉 [backend-landing-pages](https://github.com/PauloAdson/backend-landing-pages)
+👉 [PagesLink - Back-end](https://github.com/PauloAdson/pageslink-backend)
 
 ---
 
