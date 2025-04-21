@@ -1,6 +1,8 @@
-<div align="center">
+<div>
 
 # 🚀 PagesLink
+
+> REPOSITÓRIO OFICIAL
 
 **Facilitando a criação de sites para quem não entende de programação.**
 
