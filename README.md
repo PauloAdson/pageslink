@@ -2,7 +2,7 @@
 
 # 🚀 PagesLink
 
-> ESSE É O REPOSITÓRIO OFICIAL
+> ESSE É O REPOSITÓRIO OFICIAL - FRONT-END
 
 **Facilitando a criação de sites para quem não entende de programação.**
 
