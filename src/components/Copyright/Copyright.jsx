@@ -6,8 +6,8 @@ export const Copyright = () => {
   return (
     <Styled.Container>
       <span>
-        Feito com PagesLink © {new Date().getFullYear()} | Desenvolvido por{' '}
-        <a href="/">Paulo Adson</a>
+        <a href="/">Feito com PagesLink ©</a> {new Date().getFullYear()} |
+        Desenvolvido por Paulo Adson
       </span>
     </Styled.Container>
   )
