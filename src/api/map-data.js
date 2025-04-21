@@ -5,7 +5,7 @@ export const mapData = (pagesData = [{}]) => {
   return pagesData.map((data) => {
     const {
       footer_text: footerHtml = '',
-      slug_url = '',
+      slug = '',
       title = '',
       logo_favicon = null,
       sections = [],
@@ -14,7 +14,7 @@ export const mapData = (pagesData = [{}]) => {
 
     return {
       footerHtml,
-      slug_url,
+      slug,
       title,
       logo_favicon,
       sections: mapSections(sections),
