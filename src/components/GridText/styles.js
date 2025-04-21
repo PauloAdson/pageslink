@@ -28,13 +28,17 @@ export const Grid = styled.div`
 export const GridElement = styled.div`
   ${() => css`
     ${HeadingContainer} {
+      word-break: break-word;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
       position: relative;
-      left: 5rem;
+      /* left: 5rem; */
     }
 
     ${HeadingContainer}::before {
       counter-increment: grid-counter;
-      content: counter(grid-counter);
+      /* content: counter(grid-counter); */
       position: absolute;
       font-size: 7rem;
       top: -3rem;

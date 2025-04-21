@@ -1,5 +1,5 @@
 export default {
   url: '',
   siteName: '',
-  defaultSlug: 'landing-page',
+  defaultSlug: 'pageslink',
 }

@@ -21,7 +21,7 @@ function Home() {
 
   useEffect(() => {
     const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '')
-    const slug = pathName ? pathName : 'pages-link'
+    const slug = pathName ? pathName : 'pageslink'
 
     const load = async () => {
       try {
