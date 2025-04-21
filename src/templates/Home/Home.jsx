@@ -38,7 +38,7 @@ function Home() {
 
         const mappedData = mapData([json.data[0]])
 
-        if (!mappedData || mappedData.length === 0 || !mappedData[0].slug) {
+        if (!mappedData || mappedData.length === 0 || !mappedData[0].slug_url) {
           throw new Error('Slug não encontrado após mapData')
         }
 
@@ -103,7 +103,7 @@ function Home() {
     return <Loading />
   }
 
-  const { menu, sections, footerHtml, slug } = data
+  const { menu, sections, footerHtml, slug_url } = data
   const { links, text, link, srcImg, background, color } = menu
 
   return (
@@ -118,7 +118,7 @@ function Home() {
         {sections.map((section, index) => {
           const { component, button = {} } = section
 
-          const key = `${slug}-${index}`
+          const key = `${slug_url}-${index}`
 
           if (component === 'section.section-two-columns') {
             return <GridTwoColumns key={key} {...section} button={button} />
